@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List!</title>
+</head>
+<body>
+    <header>
+        <h1>To Do List!</h1>
+
+        <!--form is a container for input elements-->
+        <form id="new-task-form">
+            
+            <!--Defining Text box-->
+            <input 
+                type="text" 
+                id="new-task-input"
+                placeholder="Add a new task!"
+                autocomplete="off"> <!--Clears cache in textbox-->
+                
+                <!--Defining Submit button-->
+                <input 
+                    type="submit" 
+                    id="new-task-submit" 
+                    value="Add Task"> <!--Value is name of button-->
+        </form>
+    </header>
+
+    <main>
+        <section class="task-list"> <!--class to categorize like ID, https://www.w3schools.com/html/html_classes.asp-->
+            <h2>Tasks</h2>
+
+            <div id="tasks"> <!--Put all tasks here-->
+                <!-- <div class="task"> <Individual task-->
+                    <!-- <div class="content"> --> <!--Content of individual task-->
+                        <!-- <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                        >
+                    </div>
+                    <div class="actions"> <edit and delete button-->
+                        <!-- <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div> -->
+ 
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* CSS Variables, https://developer.mozilla.org/en-US/docs/Web/CSS/--* */
+/* :root is defining global variables */
+/* Defining colours, https://www.w3.org/wiki/CSS/Properties/color/keywords */
+:root {
+    --first-color: #008080;   /* teal */
+    --second-color: #008b8b;  /* dark cyan */
+    --third-color: #20b2aa;   /* lightseagreen */
+    --fourth-color: #C0C0C0;  /* silver */
+    --fifth-color: #faebd7;   /* antiquewhite */
+    --sixth-color: #ff69b4;   /* hotpink */
+    --seventh-color: #deb887; /* burlywood */
+}
+
+/* CSS Selector, https://www.w3schools.com/cssref/sel_all.asp */
+/* Select all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left,#007991, #78ffd6); 
+    color: white;
+}
+
+/* Overall Header */
+header {
+    padding: 20px 20px;
+    max-width: 500px;
+    max-height: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header h1 */
+header h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}   
+
+/* ID selector # */
+#new-task-form {
+    display: flex;
+}
+
+/* Defining none to input own style */
+input, button {
+    background: none;
+    border: none;
+    outline: none;
+    /* appearance: none; */
+}
+
+/* Text Box */
+#new-task-input {
+    flex: 1 1 0; /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+    padding: 10px;
+    border: 6px double var(--seventh-color);
+    background-color: var(--fifth-color); 
+    color: var(--sixth-color); /* Color of input text */
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/* Submit Button */
+#new-task-submit {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--sixth-color);
+    cursor: pointer;
+}
+
+
+main {   
+    padding: 20px 20px;
+    max-width: 500px;
+    max-height: 700px;
+    width: 100%; /* Can Delete if wan center */
+    margin: 0 auto;
+}
+
+/* Class Selector . */
+/* Header h2 */
+.task-list h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* List of task */
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 6px double var(--seventh-color);
+    background-color: var(--fifth-color); 
+}
+
+/* Task Text */
+#tasks .task .content .text {
+    color: black;
+    font-size: 15px;
+}
+
+.task .actions button {
+    margin: 0 1px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.task .actions .edit {
+    color: var(--sixth-color);
+}
+
+.task .actions .delete {
+    color: var(--fourth-color);
+}
