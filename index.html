@@ -13,6 +13,13 @@
     <header>
         <h1>To Do List!</h1>
 
+        <!--Adding local date, https://www.arclab.com/en/kb/htmlcss/display-date-time-javascript-php-ssi.html-->
+        <p>Date: <span id="datetime"></span></p>
+        <script>
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear());
+        </script>
+
         <!--form is a container for input elements-->
         <form id="taskProject">
             
@@ -33,7 +40,7 @@
 
     <main>
         <section class="taskList"> <!--class to categorize like ID, https://www.w3schools.com/html/html_classes.asp-->
-            <h2>Tasks</h2>
+            <h2>Dont be Lazy List</h2>
             <div id="tasks"></div> <!--Put all tasks here-->
         </section>
     </main>

@@ -7,6 +7,8 @@
     --hotpink: #ff69b4;
     --burlywood: #deb887;
     --dodgerblue: dodgerblue;
+    --lavenderblush: lavenderblush;
+    --gold: gold;
 }
 
 /* CSS Selector, https://www.w3schools.com/cssref/sel_all.asp */
@@ -27,20 +29,29 @@ body {
 /* Overall Header */
 header {
     padding: 20px 20px;
-    max-width: 500px;
-    max-height: 700px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
 }
 
 /* Header h1 */
 header h1 {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 42px;
+    font-weight: bold;
     margin-bottom: 5px;
     text-align: center;
-    color: white;
+    text-decoration: underline;
+    color: var(--lavenderblush);
 }   
+
+/* Date */
+header p {
+    text-align: right;
+    padding: 3px;
+    font-weight: bold;
+    color: var(--gold);
+    
+}
 
 /* ID selector # */
 #taskProject {
@@ -56,9 +67,9 @@ input, button {
 
 /* Text Box */
 #taskInput {
-    flex: 1 1 0%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+    flex: 1 1 0; /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
     padding: 10px;
-    font-size: 15px;
+    font-size: 16px;
     border: 6px double var(--burlywood);
     background-color: var(--antiquewhite); 
     color: var(--hotpink); /* Color of input text */
@@ -67,7 +78,7 @@ input, button {
 
 /* Submit Button */
 #taskSubmit {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     border: 6px double var(--burlywood);
     background-color: var(--antiquewhite); 
@@ -77,8 +88,7 @@ input, button {
 
 main {   
     padding: 20px 20px;
-    max-width: 500px;
-    max-height: 700px;
+    max-width: 550px;
     width: 100%; /* Can Delete if wan center */
     margin: 0 auto;
 }
@@ -86,11 +96,12 @@ main {
 /* Class Selector . */
 /* Header h2 */
 .taskList h2 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 5px;
-    color: white;
+    color: var(--lavenderblush);
     text-align: center;
+    text-decoration: underline;
 }
 
 /* List of task */
@@ -102,23 +113,24 @@ main {
     background-color: var(--antiquewhite); 
 }
 
+/* Task content */
 #tasks .task .content {
-    flex: 1 1 0%;
+    flex: 1 1 0;
 }
 
 /* Task Text */
 #tasks .task .content .text {
     color: var(--hotpink);
-    font-size: 15px;
+    font-size: 16px;
     width: 100%;
 }
 
 .task .actions button {
     margin: 0 1px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;  
     cursor: pointer;
-}
+}   
 
 .task .actions .edit {
     color: var(--dodgerblue);

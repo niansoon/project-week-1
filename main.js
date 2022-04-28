@@ -15,13 +15,13 @@ window.addEventListener('load', function() {
             return;
         }
 
-        //Creating DOM Elements (nodes), https://www.w3schools.com/js/js_htmldom_nodes.asp
+        //Creating DOM Elements(nodes), https://www.w3schools.com/js/js_htmldom_nodes.asp
         //Creating Task
-        const task = document.createElement("div"); //Element div
+        const task = document.createElement("div1"); //Element div1
         task.classList.add("task"); //Class task
         
         //Creating Task Content
-        const taskContent = document.createElement("div"); //Element div
+        const taskContent = document.createElement("div2"); //Element div2
         taskContent.classList.add("content"); //Class content
 
         //Creating Task Input        
@@ -37,22 +37,23 @@ window.addEventListener('load', function() {
         task.appendChild(taskContent);
 
         //Creating Actions
-        const taskAction = document.createElement("div"); //Element div
+        const taskAction = document.createElement("div3"); //Element div3
         taskAction.classList.add("actions"); //Class actions
 
         //Creating Edit Button
         const taskEdit = document.createElement("button"); //Element button
         taskEdit.classList.add("edit"); //Class edit
-        taskEdit.innerHTML = "Edit"; //Name of Edit button
+        taskEdit.innerText = "Edit"; //Name of Edit button
 
         //Creating Delete Button
         const taskDelete = document.createElement("button"); //Element button
         taskDelete.classList.add("delete"); //Class delete
-        taskDelete.innerHTML = "Delete"; //Name of Delete button
+        taskDelete.innerText = "Delete"; //Name of Delete button
 
         //Append Edit & Delete to Actions
         taskAction.appendChild(taskEdit);
         taskAction.appendChild(taskDelete);
+
         //Append Actions to Task
         task.appendChild(taskAction);
         //Append Task to overall Tasks
@@ -62,7 +63,7 @@ window.addEventListener('load', function() {
 
         //Making the Edit button work
         taskEdit.addEventListener('click', function() {
-            if(taskEdit.innerText.toLowerCase() == "edit") {
+            if(taskEdit.innerText == "Edit") {
                 taskInput.removeAttribute("readonly"); //removeAttribute(attrName)
                 taskInput.focus(); //Focus on task when press edit
                 taskEdit.innerText = "Save";
@@ -73,6 +74,7 @@ window.addEventListener('load', function() {
             }
         });
 
+        //Making the Delete button work
         taskDelete.addEventListener('click', function() {
             lists.removeChild(task);
         });
