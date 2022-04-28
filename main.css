@@ -2,13 +2,11 @@
 /* :root is defining global variables */
 /* Defining colours, https://www.w3.org/wiki/CSS/Properties/color/keywords */
 :root {
-    --first-color: #008080;   /* teal */
-    --second-color: #008b8b;  /* dark cyan */
-    --third-color: #20b2aa;   /* lightseagreen */
-    --fourth-color: #C0C0C0;  /* silver */
-    --fifth-color: #faebd7;   /* antiquewhite */
-    --sixth-color: #ff69b4;   /* hotpink */
-    --seventh-color: #deb887; /* burlywood */
+    --red: red;
+    --antiquewhite: #faebd7;
+    --hotpink: #ff69b4;
+    --burlywood: #deb887;
+    --dodgerblue: dodgerblue;
 }
 
 /* CSS Selector, https://www.w3schools.com/cssref/sel_all.asp */
@@ -24,7 +22,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background: linear-gradient(to bottom left,#007991, #78ffd6); 
-    color: white;
 }
 
 /* Overall Header */
@@ -41,10 +38,12 @@ header h1 {
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 5px;
+    text-align: center;
+    color: white;
 }   
 
 /* ID selector # */
-#new-task-form {
+#taskProject {
     display: flex;
 }
 
@@ -53,28 +52,28 @@ input, button {
     background: none;
     border: none;
     outline: none;
-    /* appearance: none; */
 }
 
 /* Text Box */
-#new-task-input {
-    flex: 1 1 0; /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
+#taskInput {
+    flex: 1 1 0%; /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox */
     padding: 10px;
-    border: 6px double var(--seventh-color);
-    background-color: var(--fifth-color); 
-    color: var(--sixth-color); /* Color of input text */
     font-size: 15px;
-    margin-right: 10px;
+    border: 6px double var(--burlywood);
+    background-color: var(--antiquewhite); 
+    color: var(--hotpink); /* Color of input text */
+    margin-right: 0;
 }
 
 /* Submit Button */
-#new-task-submit {
+#taskSubmit {
     font-size: 15px;
     font-weight: bold;
-    color: var(--sixth-color);
+    border: 6px double var(--burlywood);
+    background-color: var(--antiquewhite); 
+    color: var(--hotpink);
     cursor: pointer;
 }
-
 
 main {   
     padding: 20px 20px;
@@ -86,11 +85,12 @@ main {
 
 /* Class Selector . */
 /* Header h2 */
-.task-list h2 {
+.taskList h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 5px;
     color: white;
+    text-align: center;
 }
 
 /* List of task */
@@ -98,27 +98,32 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border: 6px double var(--seventh-color);
-    background-color: var(--fifth-color); 
+    border: 6px double var(--burlywood);
+    background-color: var(--antiquewhite); 
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
 }
 
 /* Task Text */
 #tasks .task .content .text {
-    color: black;
+    color: var(--hotpink);
     font-size: 15px;
+    width: 100%;
 }
 
 .task .actions button {
     margin: 0 1px;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: bold;  
     cursor: pointer;
 }
 
 .task .actions .edit {
-    color: var(--sixth-color);
+    color: var(--dodgerblue);
 }
 
 .task .actions .delete {
-    color: var(--fourth-color);
+    color: var(--red);
 }
